@@ -1,0 +1,44 @@
+PS C:\Users\kana\Documents\github\github> git init git_challenge
+Initialized empty Git repository in C:/Users/kana/Documents/github/github/git_challenge/.git/
+PS C:\Users\kana\Documents\github\github> git add hello_world.txt
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\kana\Documents\github\github> cd git_challenge
+PS C:\Users\kana\Documents\github\github\git_challenge> New-Item hello_world.txt
+
+
+    ディレクトリ: C:\Users\kana\Documents\github\github\git_challenge
+
+
+Mode                 LastWriteTime         Length Name                                                                                              
+----                 -------------         ------ ----                                                                                              
+-a----        2026/10/02     13:03              0 hello_world.txt                                                                                   
+
+
+PS C:\Users\kana\Documents\github\github\git_challenge> cd hello_world.txt
+cd : パス 'hello_world.txt' が存在しないため検出できません。
+発生場所 行:1 文字:1
++ cd hello_world.txt
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (hello_world.txt:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+ 
+PS C:\Users\kana\Documents\github\github\git_challenge> cd .hello_world.txt
+cd : パス 'C:\Users\kana\Documents\github\github\git_challenge\.hello_world.txt' が存在しないため検出できません。
+発生場所 行:1 文字:1
++ cd .hello_world.txt
++ ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\kana\D...hello_world.txt:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+ 
+PS C:\Users\kana\Documents\github\github\git_challenge> git add hello_world.txt
+PS C:\Users\kana\Documents\github\github\git_challenge> git commit -m "hello_world.txtを追加"
+[main (root-commit) 1741e25] hello_world.txtを追加
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello_world.txt
+PS C:\Users\kana\Documents\github\github\git_challenge> git add hello_world.txt
+PS C:\Users\kana\Documents\github\github\git_challenge> git commit -m "日本語訳を追記"
+[main 95bd241] 日本語訳を追記
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS C:\Users\kana\Documents\github\github\git_challenge> git log --oneline
+95bd241 (HEAD -> main) 日本語訳を追記
+1741e25 hello_world.txtを追加
